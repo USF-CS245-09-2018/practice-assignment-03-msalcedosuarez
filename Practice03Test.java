@@ -59,9 +59,9 @@ public class Practice03Test {
 				min = i; // constant so 0(1)
 			}
 		}
-		return min; //comstant so O(1)
+		return min; //constant so O(1)
 	}
-	//O(1+1+n+1+1) ---? Answer = O(n)
+	//O(1+1+n+1+1) ---Answer = O(n)
 
 
 	public int find_min_recursive () {
@@ -71,16 +71,17 @@ public class Practice03Test {
 	//helper method for find_min_recursive()
 	public int find_min_recrusive(int current, int minindex){
 
-		if(current == arr.length){
-			return minindex;
+		if(current == arr.length){ //constant running time, but runs n times so O(n)
+			return minindex;//constant so O(1)
 		}	
-		if(arr[current] < arr[minindex]){
-			return find_min_recrusive(current+1, current);
+		if(arr[current] < arr[minindex]){ //constant run time O(1)
+			return find_min_recrusive(current+1, current); //calling function log
 		}
 		else{
-			return find_min_recrusive(current+1, minindex);
+			return find_min_recrusive(current+1, minindex); //calling function log
 		}		
 	}
+	//O(n+1+1+log+log)----Answer = O(log2n)
 
 
 	/**
