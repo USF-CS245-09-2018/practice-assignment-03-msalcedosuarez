@@ -12,7 +12,7 @@ public class Practice03Test {
 	 */
 	public Practice03Test (String [] args) {
 		try {
-			count = Integer.parseInt(args[0]);
+			count = Integer.parseInt(args[0]) ;
 		} catch (Exception e) {
 			System.out.println("Defaulting array size to 20.");
 			count = 20;
