@@ -53,14 +53,15 @@ public class Practice03Test {
 
 
 	public int find_min_iterative () {
-		int min = 0;
-		for(int i = 1; i < arr.length; i++){
-			if(arr[i] < arr[min]){
-				min = i;
+		int min = 0; //constant running time so O(1)
+		for(int i = 1; i < arr.length; i++){ //constant running time so O(1)
+			if(arr[i] < arr[min]){ //constant running time, but runs n time so O(n)
+				min = i; // constant so 0(1)
 			}
 		}
-		return min;
+		return min; //comstant so O(1)
 	}
+	//O(1+1+n+1+1) ---? Answer = O(n)
 
 
 	public int find_min_recursive () {
