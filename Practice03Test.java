@@ -75,13 +75,13 @@ public class Practice03Test {
 			return minindex;//constant so O(1)
 		}	
 		if(arr[current] < arr[minindex]){ //constant run time O(1)
-			return find_min_recrusive(current+1, current); //calling function log
+			return find_min_recrusive(current+1, current); //calling function O(1)
 		}
 		else{
-			return find_min_recrusive(current+1, minindex); //calling function log
+			return find_min_recrusive(current+1, minindex); //calling function O(1)
 		}		
 	}
-	//O(n+1+1+log+log)----Answer = O(log2n)
+	//O(n+1+1+1+1)----Answer = O(n)
 
 
 	/**
